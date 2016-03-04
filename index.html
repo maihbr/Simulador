@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Simulador</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<style>
+		
+		.starter-template {padding: 40px 15px;text-align: center;}
+		legend{font-size:1.2em;color:red;font-weight:bold;}
+		.bg-danger{background-color:red;color:#FFF;font-weight:bold;}
+		.control-label{font-size:0.8em;outline:1px;}
+		h1{color:#9d9d9d;font-size: 18px}
+		.text-block{background-color:#EFEFFB;padding:12px}
+	</style>
+
+</head>
+<body ng-app="appSimulator">
+
+<ng-include src="'vistas/cabecera.html'"></ng-include>
+
+
+<div class="container">
+
+	<div class="row" ng-controller="contratoCtrl">
+		<ng-include src="'vistas/viewContrato.html'"></ng-include>
+	</div>
+
+	<!-- Formulario Numero 1 -->
+	<div class="row" ng-controller="form1Ctrl" ng-if="bShowForm1">
+		<ng-include src="'vistas/viewForm1.html'"></ng-include>
+	</div>
+	<!-- Fin Formulario 1 -->
+
+	<!-- Formulario Numero 2 -->
+	<div class="row" ng-controller="form2Ctrl" ng-if="bShowForm2">
+		<ng-include src="'vistas/viewForm2.html'"></ng-include>
+	</div>
+	<!-- Fin Formulario 2 -->
+
+	<!-- Formulario Numero 3 -->
+	<div class="row" ng-controller="form3Ctrl" ng-if="bShowForm3">
+		<ng-include src="'vistas/viewForm3.html'"></ng-include>
+	</div>
+	<!-- Fin Formulario 3 -->
+
+	<!-- Formulario Numero 4 -->
+	<div class="row" ng-controller="form4Ctrl" ng-if="bShowForm4">
+		<ng-include src="'vistas/viewForm4.html'"></ng-include>
+	</div>
+	<!-- Fin Formulario 4 -->
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.5.0/i18n/angular-locale_es-es.js"></script>
+<script src="https://cdn.jsdelivr.net/angular.checklist-model/0.1.3/checklist-model.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/contratoCtrl.js"></script>
+<script src="js/formCtrl01.js"></script>
+<script src="js/formCtrl02.js"></script>
+<script src="js/formCtrl03.js"></script>
+<script src="js/formCtrl04.js"></script>
+
+</body>
+</html>

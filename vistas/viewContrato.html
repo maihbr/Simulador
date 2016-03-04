@@ -1,0 +1,28 @@
+<div class="col-md-8 col-md-offset-2" style="margin-bottom:12px">
+
+	<p class="bg-danger text-center" style="padding:15px">(*) Datos Obligatorios</p>
+
+	<div class="row" style="margin-bottom:15px">
+
+		<div class="col-md-2">
+			<label for="cbo_contrato" class="control-label">(*) CONTRATO</label>
+		</div>
+
+		<div class="col-md-10">
+
+			<select ng-model="data.contrato" 
+					id="cbo_contrato"
+					name="cbo_contrato" 
+					ng-options="item as item.caption for item in DB.Contratos"
+					ng-change="Contrato_Change()"
+					class="form-control"
+					required>
+			</select>
+			
+		</div>		
+
+	</div>
+	
+	<p class="text-block" ng-show="(infoContrato.length)>0">{{infoContrato}}</p>
+
+</div>

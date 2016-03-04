@@ -1,0 +1,22 @@
+<div class="col-md-8 col-md-offset-2">
+
+	<fieldset>
+		<legend>Datos del centro de trabajo</legend>
+		<div class="form-group">
+		    <label for="cbo_numTrabajadores" class="col-md-3 control-label">(*) Número de trabajadores </label>
+		    <div class="col-md-7">												
+				<select ng-model="data.trabajadores" 
+						id="cbo_numTrabajadores" 
+						name="cbo_numTrabajadores" 
+						ng-options="item as item.caption for item in DB.Trabajadores"
+						class="form-control"
+						ng-change="Trabajadores_Change()"
+						required>		
+				</select>
+		    </div>
+		</div>
+	</fieldset>
+
+	<p class="bg-primary" style="padding:15px;margin:15px" ng-if="infoBonificacion.length>0">{{infoBonificacion}}</p>
+
+</div>
